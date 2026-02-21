@@ -1,0 +1,117 @@
+.special-modes-panel {
+  background: #000000;
+  border: 2px solid #ff00ff;
+  padding: 0;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.special-modes-toggle {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: #ff00ff;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.special-modes-toggle:hover {
+  background: rgba(255, 0, 255, 0.1);
+}
+
+.special-modes-content {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid rgba(255, 0, 255, 0.3);
+}
+
+.mode-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 0, 255, 0.2);
+}
+
+.mode-section:first-child {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: none;
+}
+
+.mode-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ff1493;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.mode-desc {
+  font-size: 0.8rem;
+  color: #ff00ff;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+}
+
+.mode-flavor {
+  font-size: 0.75rem;
+  color: #ff0066;
+  font-style: italic;
+  margin: 0;
+}
+
+.mode-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.mode-switch input {
+  display: none;
+}
+
+.mode-slider {
+  width: 36px;
+  height: 18px;
+  background: #000;
+  border: 2px solid #ff00ff;
+  border-radius: 9px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.mode-slider::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ff00ff;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.2s;
+}
+
+.mode-switch input:checked + .mode-slider::after {
+  transform: translateX(18px);
+}
+
+.mode-switch input:checked + .mode-slider {
+  background: rgba(255, 0, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.mode-label {
+  font-size: 0.8rem;
+  color: #ff1493;
+  font-weight: 700;
+}

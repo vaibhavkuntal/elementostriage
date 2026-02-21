@@ -1,0 +1,238 @@
+.trust-score-panel {
+  background: #000000;
+  border: 2px solid #ff00ff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 
+    0 0 15px rgba(255, 0, 255, 0.5),
+    inset 0 0 15px rgba(255, 0, 255, 0.1);
+  position: relative;
+}
+
+.trust-score-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+}
+
+.panel-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ff00ff;
+  margin: 0;
+  text-shadow: 
+    0 0 10px #ff00ff,
+    1px 1px 0px #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.score-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary-item {
+  text-align: center;
+  padding: 1rem;
+  background: #000000;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: #ff1493;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(255, 20, 147, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.summary-value {
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 
+    0 0 15px currentColor,
+    2px 2px 0px #000000;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0.75rem;
+  background: #000000;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.stat-value {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+  text-shadow: 
+    0 0 15px currentColor,
+    1px 1px 0px #000000;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.trust-economy-info {
+  padding: 1rem;
+  background: #000000;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.info-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff1493;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: #ff00ff;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+}
+
+.economy-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+}
+
+.rule-indicator {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border: 2px solid #000000;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.rule-indicator.high {
+  background: #ff00ff;
+  color: #000000;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.rule-indicator.medium {
+  background: #ff1493;
+  color: #ffffff;
+  box-shadow: 0 0 10px #ff1493;
+}
+
+.rule-indicator.low {
+  background: #ff0066;
+  color: #ffffff;
+  box-shadow: 0 0 10px #ff0066;
+}
+
+.type-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.breakdown-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff1493;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.type-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.type-name {
+  font-size: 0.85rem;
+  color: #ff00ff;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.type-score-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.type-score-bar {
+  flex: 1;
+  height: 10px;
+  background: #000000;
+  border: 1px solid #ff00ff;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(255, 0, 255, 0.3);
+}
+
+.type-score-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.type-score-value {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 40px;
+  text-align: right;
+  text-shadow: 0 0 10px currentColor;
+}
+
+.type-count {
+  font-size: 0.75rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+}

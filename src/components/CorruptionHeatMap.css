@@ -1,0 +1,82 @@
+.corruption-heat-map {
+  background: #000000;
+  border: 2px solid #ff00ff;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.heat-map-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff00ff;
+  margin: 0 0 0.25rem 0;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.heat-map-subtitle {
+  font-size: 0.8rem;
+  color: #ff1493;
+  margin: 0 0 1rem 0;
+}
+
+.heat-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.heat-map-cell {
+  background: rgba(255, 0, 255, 0.08);
+  border: 1px solid rgba(255, 0, 255, 0.4);
+  padding: 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.heat-map-cell:hover {
+  border-color: #ff00ff;
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.5);
+}
+
+.heat-map-cell-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ff1493;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.heat-map-cell-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #ff00ff;
+}
+
+.heat-stat {
+  opacity: 0.9;
+}
+
+.heat-danger {
+  color: #ff0066;
+  font-weight: 700;
+}
+
+.heat-map-cell-bar {
+  height: 6px;
+  background: #000;
+  border: 1px solid #ff00ff;
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.heat-map-cell-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff00ff, #ff0066);
+  transition: width 0.3s ease;
+}

@@ -1,0 +1,173 @@
+.entity-detail-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.entity-detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.entity-header {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.entity-info h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.entity-meta {
+  display: flex;
+  gap: 1rem;
+}
+
+.entity-type,
+.entity-sector {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.entity-type {
+  background: #e6fffa;
+  color: #234e52;
+}
+
+.entity-sector {
+  background: #ebf8ff;
+  color: #2c5282;
+}
+
+.entity-scores {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.score-card {
+  text-align: center;
+  min-width: 120px;
+}
+
+.score-label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+.score-value.suspicion {
+  color: #e53e3e;
+}
+
+.risk-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.explanation-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.explanation-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.explanation-intro {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.explanation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.explanation-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.explanation-list li:last-child {
+  border-bottom: none;
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #3182ce;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: #2c5aa0;
+}
+
+@media (max-width: 768px) {
+  .entity-header {
+    flex-direction: column;
+  }
+  
+  .entity-scores {
+    width: 100%;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,194 @@
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--search-bg);
+  border: 1px solid var(--search-border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+}
+
+.search-input-wrapper:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-color-alpha);
+}
+
+.search-icon {
+  color: var(--text-secondary);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  transition: color 0.2s;
+}
+
+.search-clear:hover {
+  color: var(--text-primary);
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-results-header {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--dropdown-border);
+}
+
+.search-result-item {
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid var(--dropdown-border);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: var(--dropdown-hover);
+}
+
+.result-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.result-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+
+.result-type,
+.result-sector,
+.result-score {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.result-type {
+  background: var(--type-bg);
+  color: var(--type-color);
+}
+
+.result-sector {
+  background: var(--sector-bg);
+  color: var(--sector-color);
+}
+
+.result-score {
+  background: var(--score-bg);
+  color: var(--score-color);
+}
+
+.search-highlight {
+  background: var(--highlight-bg);
+  color: var(--highlight-color);
+  padding: 0 2px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.search-loading,
+.search-no-results {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --search-bg: rgba(255, 255, 255, 0.05);
+  --search-border: rgba(255, 255, 255, 0.1);
+  --primary-color: #00d4ff;
+  --primary-color-alpha: rgba(0, 212, 255, 0.1);
+  --dropdown-bg: #1a1a2e;
+  --dropdown-border: rgba(255, 255, 255, 0.1);
+  --dropdown-hover: rgba(255, 255, 255, 0.05);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --type-bg: rgba(0, 212, 255, 0.2);
+  --type-color: #00d4ff;
+  --sector-bg: rgba(255, 0, 255, 0.2);
+  --sector-color: #ff00ff;
+  --score-bg: rgba(255, 255, 0, 0.2);
+  --score-color: #ffff00;
+  --highlight-bg: rgba(255, 255, 0, 0.3);
+  --highlight-color: #ffff00;
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+  --search-bg: #ffffff;
+  --search-border: #e2e8f0;
+  --primary-color: #3182ce;
+  --primary-color-alpha: rgba(49, 130, 206, 0.1);
+  --dropdown-bg: #ffffff;
+  --dropdown-border: #e2e8f0;
+  --dropdown-hover: #f7fafc;
+  --text-primary: #1a202c;
+  --text-secondary: #718096;
+  --type-bg: #ebf8ff;
+  --type-color: #2c5282;
+  --sector-bg: #fce7f3;
+  --sector-color: #9f7aea;
+  --score-bg: #fef3c7;
+  --score-color: #92400e;
+  --highlight-bg: #fef3c7;
+  --highlight-color: #92400e;
+}

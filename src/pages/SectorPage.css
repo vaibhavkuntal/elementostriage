@@ -1,0 +1,171 @@
+.sector-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.sector-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-link {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.sector-overview {
+  margin-bottom: 2rem;
+}
+
+.overview-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.overview-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+.risk-breakdown {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.risk-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.risk-label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.risk-value {
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+.risk-value.high {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.risk-value.medium {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.risk-value.low {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.trend-indicator {
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.trend-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.trend-improving {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.trend-declining {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.trend-stable {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.sector-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.graph-section,
+.leaderboard-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.graph-container {
+  min-height: 600px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .sector-main {
+    grid-template-columns: 1fr;
+  }
+}
